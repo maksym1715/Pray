@@ -9,16 +9,16 @@ public class PrayAppl {
 
 	public static void main(String[] args) {
 		Man person = new Man();
-        person.pray();  // Output: "Prayer of a common person"
+        person.pray();  
 
         Jew jew = new Jew();
-        jew.pray();  // Output: "Prayer of a Jew"
+        jew.pray(); 
 
         Muslim muslim = new Muslim();
-        muslim.pray();  // Output: "Prayer of a Muslim"
+        muslim.pray();  
 
         Peasant christian = new Peasant();
-        christian.pray();  // Output: "Prayer of a Christian"
+        christian.pray();  
 		
 	}
 
