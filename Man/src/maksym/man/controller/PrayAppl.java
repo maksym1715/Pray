@@ -12,13 +12,16 @@ public class PrayAppl {
         person.pray();  
 
         Jew jew = new Jew();
-        jew.pray(); 
+        jew.pray();
+        jew.learn();
 
         Muslim muslim = new Muslim();
-        muslim.pray();  
+        muslim.pray(); 
+        muslim.learn();
 
         Peasant christian = new Peasant();
         christian.pray();  
+        christian.learn();
 		
 	}
 
