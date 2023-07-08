@@ -9,19 +9,19 @@ public class PrayAppl {
 
 	public static void main(String[] args) {
 		Man person = new Man();
-        person.pray();  
+        person.toStringReligion();;  
 
         Jew jew = new Jew();
-        jew.pray();
-        jew.learn();
+        jew.toStringReligion();;
+      
 
         Muslim muslim = new Muslim();
-        muslim.pray(); 
-        muslim.learn();
+        muslim.toStringReligion();; 
+        
 
         Peasant christian = new Peasant();
-        christian.pray();  
-        christian.learn();
+        christian.toStringReligion();;  
+        
 		
 	}
 
