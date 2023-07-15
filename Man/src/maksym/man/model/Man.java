@@ -4,6 +4,13 @@ import maksym.man.controller.Pray;
 
 public class Man implements Pray {
 	
+	
+	private String name;
+
+    public Man(String name) {
+        this.name = name;
+    }
+	
 	public void pray() {
 		System.out.println("Prayer of a common person");
 	}; 
@@ -17,6 +24,10 @@ public class Man implements Pray {
 		pray();
 		learn();
 		
-	}; 
+	}
+
+	public String getName() {
+        return name;
+    }
 
 }
