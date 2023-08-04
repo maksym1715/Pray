@@ -1,43 +1,43 @@
 package maksym.man.controller;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import maksym.man.model.Jew;
 import maksym.man.model.Man;
 import maksym.man.model.Muslim;
 import maksym.man.model.Peasant;
+import maksym.man.service.ManService;
 
 public class PrayAppl {
 
 	public static void main(String[] args) {
 				
-		Map<String, Man> people = new HashMap<>();
+		 ManService manService = new ManService();
 		
 		
-		Man person = new Man("Max");
-		 people.put(person.getName(), person);
-       
+		 Man person = new Man("Max");
+		 manService.saveMan(person);
 
-        Jew jew = new Jew("Mardehay");
-        people.put(jew.getName(), jew);
-        
+	        Jew jew = new Jew("Mardehay");
+	        manService.saveMan(jew);
 
-        Muslim muslim = new Muslim("Ahmed");
-        people.put(muslim.getName(), muslim);
+	        Muslim muslim = new Muslim("Ahmed");
+	        manService.saveMan(muslim);
         
         
 
         Peasant christian = new Peasant("John");
-        people.put(christian.getName(), christian);
+       manService.saveMan(christian);
+
+       manService.printAllPeople();
+
+       manService.deleteMan("Mardehay");
        
         
-        for (String name : people.keySet()) {
-            Man person1 = people.get(name);
-            System.out.println("Name: " + name);
-            person1.toStringReligion();
-            System.out.println();
-        }
+       Man updatedMan = new Man("Max");
+       updatedMan.learn(); 
+       manService.updateMan(updatedMan);
+
+       System.out.println("\nAfter updating:\n");
+       manService.printAllPeople();
         
 		
 	}
